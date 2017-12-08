@@ -1,6 +1,5 @@
 from pprint import pprint
 import urllib.request, json
-import 
 
 # Store api key value into variable
 APIKEY_VALUE = "demo"

@@ -1,5 +1,6 @@
 import psycopg2
 import sys
+import data_source
 
 # print to see if you have access to the clean new list of contact data
 # print(thin_contact_list)
@@ -20,7 +21,7 @@ try:
     print (ver, "i can conncet")    
     
     # loop through clean list and insert to db
-    for contact in thin_contact_list:
+    for contact in data_source.thin_contact_list:
         cur.execute("INSERT INTO contacts(first_name, last_name, email) VALUES ('"+ contact['firstname'] + "','" + contact['lastname'] + "',' " + contact['email'] + "')")
         # error check print to see if each record was inserted
         print('inserted')
